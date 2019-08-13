@@ -1,0 +1,120 @@
+/*menu styles*/
+.menu_bar {
+  background-color: #24292e;
+  padding: 8px 0px	 
+}
+.menu_bar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+}
+.menu-pan h3 {
+  text-align: center;
+  margin: 0px;
+  background-color: #2e353d;
+  color: #fff;
+  padding: 8px 0px;
+}
+.menu-pan {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  background-color: #2e353d;
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+  transition: all ease 200ms;
+  padding-top: 15px;
+}
+.menu-pan-click {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background-color: #2e353d;
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+  transition: all ease 300ms;
+  padding-top: 30px;
+  overflow-y: auto;	
+}
+.close-btn {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 9999;
+  font-size: 25px;
+  background-color: #404954;
+  padding: 8px 8px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: -3px 0px 5px 0px #000;	
+}
+/*-------Dropdwon----------*/
+#navi_bar li a, #navi_bar a, #navi_bar .panel a, #navi_bar .panel .panel-collapse li a {
+  text-decoration: none;
+  line-height: 40px;
+  color: #fff;
+  font-size: 15px;
+  border-bottom: 1px solid #000;
+  display: block;
+  position: relative;
+}
+#navi_bar .panel a span {
+  font-size: 25px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  transition: all ease 300ms;	
+  color: #F38800;	
+}
+.nav-active {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+}
+#navi_bar {
+  margin-bottom: 0px;
+  padding-left: 0px;
+  background-color: #2e353d;
+  margin-top: 15px;
+}
+#navi_bar li a, #navi_bar a {
+  padding-left: 10px;
+}
+#navi_bar li a i, #navi_bar a i {
+  margin-right: 10px;
+}
+#navi_bar .panel {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+#navi_bar .panel .panel-collapse {
+  padding-left: 0px;
+  background-color: #181c20;
+}
+#navi_bar .panel .panel-collapse li a {
+  border-bottom: 1px solid #333;
+  padding-left: 37px;
+  transition: all ease 300ms;	  
+}
+#navi_bar .panel .panel-collapse li a:hover {
+  background-color: #000;
+  color: #F38800;	
+  transition: all ease 300ms;	  	
+}
+#navi_bar .panel .panel-collapse li a::after {
+  position: absolute;
+  content: "\f101";
+  left: 15px;
+  font-family: FontAwesome;
+}
+.rotate {
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  -moz-transform: rotate(180deg); /* Firefox */
+  -ms-transform: rotate(180deg); /* IE 9 */
+  transform: rotate(180deg); /* Standard syntax */
+  transition: all ease 300ms;
+}
