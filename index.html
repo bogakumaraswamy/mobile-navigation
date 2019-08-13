@@ -1,1 +1,98 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>simple-responsive-mobile-navigation</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="background: #fff">
+<section class="menu_bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"> <a class="menu-btn" href="#" onClick="onclick_event()"><i class="fa fa-navicon"></i></a> </div>
+    </div>
+  </div>
+</section>
+<div class="menu-pan">
+  <div class="close-btn"><i class="fa fa-angle-left"></i></div>
+  <h3>Your Logo</h3>
+  <ul class="panel-group" id="navi_bar">
+    <li class="nav-active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+    <div class="panel"> <a data-toggle="collapse" data-parent="#navi_bar" href="#ui-elements"> <i class="fa fa-clone"></i>UI Elements <span class="fa fa-angle-down"></span></a>
+      <ul id="ui-elements" class="panel-collapse collapse">
+        <li><a href="#">CSS3 Animation</a></li>
+        <li><a href="#">General</a></li>
+        <li><a href="#">Buttons</a></li>
+        <li><a href="#">Tabs &amp; Accordions</a></li>
+        <li><a href="#">Typography</a></li>
+        <li><a href="#">FontAwesome</a></li>
+        <li><a href="#">Slider</a></li>
+        <li><a href="#">Panels</a></li>
+        <li><a href="#">Widgets</a></li>
+        <li><a href="#">Bootstrap Model</a></li>
+      </ul>
+    </div>
+    <li><a href="#"><i class="fa fa-align-left"></i> About us</a></li>
+    <div class="panel"> <a data-toggle="collapse" data-parent="#navi_bar" href="#service1"><i class="fa fa-wrench"></i>Services 1 <span class="fa fa-angle-down"></span></a>
+      <ul id="service1" class="panel-collapse collapse">
+        <li><a href="#">Services 1</a></li>
+        <li><a href="#">Services 1</a></li>
+        <li><a href="#">Services 1</a></li>
+        <li><a href="#">Services 1</a></li>
+        <li><a href="#">Services 1</a></li>
+        <li><a href="#">Services 1</a></li>
+        <li><a href="#">Services 1</a></li>
+      </ul>
+    </div>
+    <div class="panel"> <a data-toggle="collapse" data-parent="#navi_bar" href="#service2"><i class="fa fa-camera"></i>Services 2 <span class="fa fa-angle-down"></span></a>
+      <ul id="service2" class="panel-collapse collapse">
+        <li><a href="#">Services 2</a></li>
+        <li><a href="#">Services 2</a></li>
+        <li><a href="#">Services 2</a></li>
+        <li><a href="#">Services 2</a></li>
+        <li><a href="#">Services 2</a></li>
+        <li><a href="#">Services 2</a></li>
+        <li><a href="#">Services 2</a></li>
+        <li><a href="#">Services 2</a></li>
+      </ul>
+    </div>
+	<li><a href="#"><i class="fa fa-align-left"></i>Contact us</a></li>  
+  </ul>
+</div>
+<!-- jQuery (JavaScript plugins) --> 
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script>
+//menu bar	
+function onclick_event(){
+		document.querySelector('.menu-pan').classList.toggle('menu-pan-click');		
+	}
+	document.querySelector('.close-btn').addEventListener('click', function(){
+		onclick_event();
+	});		
+//---------
+ $(document).ready(function(){
+        $(".collapse.in").each(function(){
+        	$(this).siblings(".panel").find(".fa-angle-down").addClass("rotate");
+        });
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).parent().find(".fa-angle-down").addClass("rotate");
+        }).on('hide.bs.collapse', function(){
+        	$(this).parent().find(".fa-angle-down").removeClass("rotate");
+        });
+    });	
+</script>
+</body>
+</html>
